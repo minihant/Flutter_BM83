@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31cb9746-018d-49d2-93ff-f9d4fa1f67c0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/device_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/device_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/service_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/service_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bluetooth_ble.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bluetooth_ble.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jrOhupNuuBWhHXRdGotIf1hFUH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31cb9746-018d-49d2-93ff-f9d4fa1f67c0" name="Default Changelist" comment="" />
+      <created>1604558866493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604558866493</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1850" height="266" key="GridCell.Tab.0.bottom" timestamp="1604659320298">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="266" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604659320298" />
+    <state width="1850" height="266" key="GridCell.Tab.0.center" timestamp="1604659320298">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="266" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604659320298" />
+    <state width="1850" height="266" key="GridCell.Tab.0.left" timestamp="1604659320297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="266" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604659320297" />
+    <state width="1850" height="266" key="GridCell.Tab.0.right" timestamp="1604659320298">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="266" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604659320298" />
+    <state width="1850" height="265" key="GridCell.Tab.1.bottom" timestamp="1604564030168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="265" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604564030168" />
+    <state width="1850" height="265" key="GridCell.Tab.1.center" timestamp="1604564030168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="265" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604564030168" />
+    <state width="1850" height="265" key="GridCell.Tab.1.left" timestamp="1604564030168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="265" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604564030168" />
+    <state width="1850" height="265" key="GridCell.Tab.1.right" timestamp="1604564030168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1850" height="265" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604564030168" />
+    <state x="460" y="74" key="SettingsEditor" timestamp="1604559209695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="460" y="74" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604559209695" />
+  </component>
+</project>

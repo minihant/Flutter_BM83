@@ -1,0 +1,22 @@
+PODS:
+  - bluetooth_ble (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - bluetooth_ble (from `.symlinks/plugins/bluetooth_ble/ios`)
+  - Flutter (from `.symlinks/flutter/ios`)
+
+EXTERNAL SOURCES:
+  bluetooth_ble:
+    :path: ".symlinks/plugins/bluetooth_ble/ios"
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+
+SPEC CHECKSUMS:
+  bluetooth_ble: c2068862b4eda87440ee0cb8658539c0ee17dedb
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: 10ae9c18d12c9ffc2275c9a159a3b1e281990db0
+
+COCOAPODS: 1.8.4
