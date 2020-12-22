@@ -27,7 +27,7 @@ class BluetoothBle {
   /// timeout, second
   Future<List<BleDevice>> scan({
     List<String> services,
-    int timeout = 3,
+    int timeout = 8,
   }) async {
     this.devices.clear();
     _findDeviceController.add(null);
@@ -36,7 +36,7 @@ class BluetoothBle {
       "time": timeout,
     });
     final list = result["devices"];
-    print("on scan return result!");
+    // print("on scan return result!");
     if (list == null || list.isEmpty) {
       notifyDeviceChange();
       return this.devices;
@@ -60,12 +60,14 @@ class BluetoothBle {
       return;
     }
     //---- @@ ------------------------------
-    if (device.name == "") return;
-
     print(device.name + ' rssi: ' + device.rssi.toString());
-    if (device.rssi < -80) {
+    if (device.name == "") {
       return;
     }
+
+    // if (device.rssi < -80) {
+    //   return;
+    // }
     if (!devices.any((test) => test.id == device.id)) {
       devices.add(device);
       devices.sort();

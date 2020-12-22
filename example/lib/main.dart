@@ -1,9 +1,8 @@
 import 'dart:io';
-
 import 'package:bluetooth_ble/bluetooth_ble.dart';
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
-
+import 'package:flutter_beep/flutter_beep.dart';
 import 'device_page.dart';
 
 void main() => runApp(MyApp());
@@ -46,17 +45,31 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ESVS Projector app'),
+        title: const Text('ESVS Projector'),
+        actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: () {
+                _scan();
+              },
+              child: Icon(
+                Icons.search,
+                size: 26.0,
+              ),
+            ),
+          ),
+        ],
       ),
       body: StreamBuilder<BleDevice>(
           stream: ble.deviceStream,
           builder: (context, _) {
             return ListView(
               children: <Widget>[
-                RaisedButton(
-                  onPressed: _scan,
-                  child: Text("Scan Device"),
-                ),
+                // RaisedButton(
+                //   onPressed: _scan,
+                //   child: Text("Scan Device"),
+                // ),
                 // RaisedButton(
                 //   onPressed: () => _scanWithService(macServiceId),
                 //   child: Text("Scan 1801 device"),
@@ -76,11 +89,15 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  bool showProgress = true;
   void _scan() async {
     try {
       await ble.scan();
+
+      print("scan finish");
+      FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP2);
     } catch (e) {
-      print(e.message);
+      print(e);
     }
   }
 
