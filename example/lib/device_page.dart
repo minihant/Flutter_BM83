@@ -313,6 +313,32 @@ class _DevicePageState extends State<DevicePage> {
                   });
                 },
               ),
+              IconButton(
+                icon: Icon(Icons.bluetooth_audio_sharp),
+                iconSize: 50,
+                color: isConnect ? Colors.blueGrey : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    if (isConnect == true)
+                      writeKey(
+                          services[serviceID].chs[chrsID], KeyID['AudioBTKey']);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.speaker),
+                iconSize: 50,
+                color: isConnect ? Colors.blueGrey : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    if (isConnect == true)
+                      writeKey(
+                          services[serviceID].chs[chrsID], KeyID['AudioPJKey']);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
             ],
           ),
           // Container(
@@ -469,12 +495,12 @@ class _DevicePageState extends State<DevicePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.headset),
-            label: 'Pairing',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.library_music_outlined),
             label: 'Rx mode',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.headset),
+            label: 'Pairing',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.send_rounded),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:flutter_beep/flutter_beep.dart';
 import 'device_page.dart';
+import 'service_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
               },
               child: Icon(
                 Icons.search,
-                size: 26.0,
+                size: 40.0,
               ),
             ),
           ),
@@ -92,12 +93,35 @@ class _HomePageState extends State<HomePage> {
   bool showProgress = true;
   void _scan() async {
     try {
+      print("scan start");
       await ble.scan();
 
       print("scan finish");
       FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP2);
+      var drvCount = 0;
+      for (final drv in devices) {
+        if (drv.name == 'BLE_BM83SDK') {
+          drvCount++;
+        }
+      }
+      if (drvCount == 1) {
+        //--- jump to navagator -----
+        for (final drv in devices) {
+          if (drv.name == 'BLE_BM83SDK') {
+            print("find device : " + drv.name);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => DevicePage(
+                  device: drv,
+                ),
+              ),
+            );
+          }
+        }
+      }
     } catch (e) {
-      print(e);
+      print("bluetooth error : " + e.toString());
     }
   }
 
@@ -137,7 +161,7 @@ class _HomePageState extends State<HomePage> {
     if (Platform.isIOS) {
       return "1801";
     } else {
-      return "00001801-0000-1000-8000-00805f9b34fb";
+      return "49535343-fe7d-4ae5-8fa9-9fafd205e455";
     }
   }
 
