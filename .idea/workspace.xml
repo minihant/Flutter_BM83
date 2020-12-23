@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31cb9746-018d-49d2-93ff-f9d4fa1f67c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/device_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/device_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bluetooth_ble.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bluetooth_ble.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,22 +75,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="678" y="202" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604889408979" />
-    <state width="1852" height="376" key="GridCell.Tab.0.bottom" timestamp="1608624285284">
+    <state width="1852" height="286" key="GridCell.Tab.0.bottom" timestamp="1608627242330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1852" height="376" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608624285284" />
-    <state width="1852" height="376" key="GridCell.Tab.0.center" timestamp="1608624285284">
+    <state width="1852" height="286" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608627242330" />
+    <state width="1852" height="286" key="GridCell.Tab.0.center" timestamp="1608627242330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1852" height="376" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608624285284" />
-    <state width="1852" height="376" key="GridCell.Tab.0.left" timestamp="1608624285284">
+    <state width="1852" height="286" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608627242330" />
+    <state width="1852" height="286" key="GridCell.Tab.0.left" timestamp="1608627242329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1852" height="376" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608624285284" />
-    <state width="1852" height="376" key="GridCell.Tab.0.right" timestamp="1608624285284">
+    <state width="1852" height="286" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608627242329" />
+    <state width="1852" height="286" key="GridCell.Tab.0.right" timestamp="1608627242330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1852" height="376" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608624285284" />
+    <state width="1852" height="286" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608627242330" />
     <state width="1850" height="265" key="GridCell.Tab.1.bottom" timestamp="1604564030168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

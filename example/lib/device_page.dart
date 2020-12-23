@@ -4,11 +4,10 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:bluetooth_ble/bluetooth_ble.dart';
-// import 'package:flutter/services.dart';
-// import 'package:oktoast/oktoast.dart';
 import 'service_page.dart';
 // import 'package:soundpool/soundpool.dart';
 import 'package:flutter_beep/flutter_beep.dart';
+import 'IR_Key.dart';
 
 class DevicePage extends StatefulWidget {
   final BleDevice device;
@@ -93,16 +92,16 @@ class _DevicePageState extends State<DevicePage> {
       print("selected Navi: " + _selectedIndex.toString());
       switch (_selectedIndex) {
         case 0:
-          writeKey(services[serviceID].chs[chrsID], "K100");
+          writeKey(services[serviceID].chs[chrsID], KeyID["btPairingKey"]);
           break;
         case 1:
-          writeKey(services[serviceID].chs[chrsID], "K101");
+          writeKey(services[serviceID].chs[chrsID], KeyID["btTxModeKey"]);
           break;
         case 2:
-          writeKey(services[serviceID].chs[chrsID], "K102");
+          writeKey(services[serviceID].chs[chrsID], KeyID["btRxModeKey"]);
           break;
         case 3:
-          writeKey(services[serviceID].chs[chrsID], "K103");
+          writeKey(services[serviceID].chs[chrsID], 103);
           break;
       }
     });
@@ -154,80 +153,310 @@ class _DevicePageState extends State<DevicePage> {
           Row(
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.videocam_off),
-                iconSize: 100,
+                icon: Icon(Icons.power_settings_new),
+                iconSize: 60,
                 color: isConnect ? Colors.black : Colors.white,
                 onPressed: () {
                   setState(() {
                     if (isConnect == true) {
-                      writeKey(services[serviceID].chs[chrsID], "K01");
+                      writeKey(services[serviceID].chs[chrsID], KeyID['PJKey']);
                       FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                     }
                   });
                 },
               ),
+              Container(
+                width: 60,
+              ),
               IconButton(
-                icon: Icon(Icons.video_call),
-                iconSize: 100,
+                icon: Icon(Icons.wb_sunny_sharp),
+                iconSize: 60,
                 color: isConnect ? Colors.green : Colors.white,
                 onPressed: () {
                   setState(() {
                     if (isConnect == true)
-                      writeKey(services[serviceID].chs[chrsID], "K02");
+                      writeKey(services[serviceID].chs[chrsID],
+                          KeyID['btPJShortKey']);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
                 },
               ),
+              Container(
+                width: 60,
+              ),
               IconButton(
-                icon: Icon(Icons.build),
-                iconSize: 80,
+                icon: Icon(Icons.home_rounded),
+                iconSize: 60,
                 color: isConnect ? Colors.blueGrey : Colors.white,
                 onPressed: () {
                   setState(() {
                     if (isConnect == true)
-                      writeKey(services[serviceID].chs[chrsID], "K99");
+                      writeKey(
+                          services[serviceID].chs[chrsID], KeyID['HOMEKey']);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
                 },
               ),
             ],
           ),
-          Container(
-            height: 10,
-          ),
+          // Container(
+          //   height: 1,
+          // ),
           Row(
             children: <Widget>[
               IconButton(
                 icon: Icon(Icons.volume_off),
-                iconSize: 100,
+                iconSize: 50,
                 color: isConnect ? Colors.lightGreen : Colors.white,
                 onPressed: () {
                   setState(() {
-                    writeKey(services[serviceID].chs[chrsID], "K03");
+                    writeKey(services[serviceID].chs[chrsID], KeyID["MuteKey"]);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
                 },
               ),
               IconButton(
                 icon: Icon(Icons.volume_down),
-                iconSize: 100,
+                iconSize: 50,
                 color: isConnect ? Colors.lightBlue : Colors.white,
                 tooltip: 'Decress volume by 10',
                 onPressed: () {
                   setState(() {
-                    writeKey(services[serviceID].chs[chrsID], "K04");
+                    writeKey(
+                        services[serviceID].chs[chrsID], KeyID["VolDownKey"]);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
                 },
               ),
               IconButton(
                 icon: Icon(Icons.volume_up),
-                iconSize: 100,
+                iconSize: 50,
                 color: isConnect ? Colors.red : Colors.white,
                 tooltip: 'Increase volume by 10',
                 onPressed: () {
                   setState(() {
-                    writeKey(services[serviceID].chs[chrsID], "K05");
+                    writeKey(
+                        services[serviceID].chs[chrsID], KeyID["VolUpKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.rotate_left_sharp),
+                iconSize: 50,
+                color: isConnect ? Colors.red : Colors.white,
+                tooltip: 'Increase volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(
+                        services[serviceID].chs[chrsID], KeyID["FocusFwKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.rotate_right_sharp),
+                iconSize: 50,
+                color: isConnect ? Colors.red : Colors.white,
+                tooltip: 'Increase volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(
+                        services[serviceID].chs[chrsID], KeyID["FocusBwKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+            ],
+          ),
+          // Container(
+          //   height: 1,
+          // ),
+          Row(
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.settings_input_hdmi),
+                iconSize: 50,
+                color: isConnect ? Colors.black : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    if (isConnect == true) {
+                      writeKey(
+                          services[serviceID].chs[chrsID], KeyID['HDMI1Key']);
+                      FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                    }
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.settings_input_hdmi),
+                iconSize: 50,
+                color: isConnect ? Colors.green : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    if (isConnect == true)
+                      writeKey(
+                          services[serviceID].chs[chrsID], KeyID['HDMI2Key']);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.settings_display),
+                iconSize: 50,
+                color: isConnect ? Colors.blueGrey : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    if (isConnect == true)
+                      writeKey(services[serviceID].chs[chrsID], KeyID['DPKey']);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+            ],
+          ),
+          // Container(
+          //   height: 1,
+          // ),
+          Row(
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.filter_1),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["F1Key"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.filter_2),
+                iconSize: 50,
+                color: isConnect ? Colors.lightBlue : Colors.white,
+                tooltip: 'Decress volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["F2Key"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.filter_3),
+                iconSize: 50,
+                color: isConnect ? Colors.red : Colors.white,
+                tooltip: 'Increase volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["F3Key"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+            ],
+          ),
+          // Container(
+          //   height: 1,
+          // ),
+          Row(
+            children: <Widget>[
+              Container(
+                width: 80,
+              ),
+              IconButton(
+                icon: Icon(null),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                onPressed: () {
+                  //   setState(() {
+                  //     writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
+                  //     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  //   });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_upward),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                width: 80,
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_back),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                tooltip: 'Increase volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["LeftKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.center_focus_strong),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                tooltip: 'Increase volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["OkKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_forward),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                tooltip: 'Increase volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(
+                        services[serviceID].chs[chrsID], KeyID["RightKey"]);
+                    FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  });
+                },
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                width: 80,
+              ),
+              IconButton(
+                icon: Icon(null),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                onPressed: () {
+                  // setState(() {
+                  //   writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
+                  //   FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  // });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_downward),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen : Colors.white,
+                tooltip: 'Decress volume by 10',
+                onPressed: () {
+                  setState(() {
+                    writeKey(services[serviceID].chs[chrsID], KeyID["DownKey"]);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
                 },
@@ -244,12 +473,12 @@ class _DevicePageState extends State<DevicePage> {
             label: 'Pairing',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.phone_forwarded),
-            label: 'Tx mode',
+            icon: Icon(Icons.library_music_outlined),
+            label: 'Rx mode',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.phone_callback),
-            label: 'Rx mode',
+            icon: Icon(Icons.send_rounded),
+            label: 'Tx mode',
           ),
         ],
         currentIndex: _selectedIndex,
@@ -292,9 +521,9 @@ class _DevicePageState extends State<DevicePage> {
   //   device.writeData(ch: ch, data: Uint8List.fromList(data));
   // }
 
-  void writeKey(BleCh ch, String str) {
+  void writeKey(BleCh ch, int keynum) {
     // String data = "K01";
-    List<int> bytes = utf8.encode(str);
+    List<int> bytes = utf8.encode('K' + keynum.toString());
     device.writeData(ch: ch, data: Uint8List.fromList(bytes));
   }
 }
