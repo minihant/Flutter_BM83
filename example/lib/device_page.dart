@@ -392,9 +392,9 @@ class _DevicePageState extends State<DevicePage> {
                 width: 80,
               ),
               IconButton(
-                icon: Icon(null),
+                icon: Icon(Icons.select_all_sharp),
                 iconSize: 50,
-                color: isConnect ? Colors.lightGreen : Colors.white,
+                color: isConnect ? Colors.lightGreen[100] : Colors.white,
                 onPressed: () {
                   //   setState(() {
                   //     writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
@@ -411,6 +411,17 @@ class _DevicePageState extends State<DevicePage> {
                     writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.select_all_sharp),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen[100] : Colors.white,
+                onPressed: () {
+                  // setState(() {
+                  //   writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
+                  //   FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  // });
                 },
               ),
             ],
@@ -465,9 +476,9 @@ class _DevicePageState extends State<DevicePage> {
                 width: 80,
               ),
               IconButton(
-                icon: Icon(null),
+                icon: Icon(Icons.select_all_sharp),
                 iconSize: 50,
-                color: isConnect ? Colors.lightGreen : Colors.white,
+                color: isConnect ? Colors.lightGreen[100] : Colors.white,
                 onPressed: () {
                   // setState(() {
                   //   writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
@@ -485,6 +496,17 @@ class _DevicePageState extends State<DevicePage> {
                     writeKey(services[serviceID].chs[chrsID], KeyID["DownKey"]);
                     FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
                   });
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.select_all_sharp),
+                iconSize: 50,
+                color: isConnect ? Colors.lightGreen[100] : Colors.white,
+                onPressed: () {
+                  // setState(() {
+                  //   writeKey(services[serviceID].chs[chrsID], KeyID["UpKey"]);
+                  //   FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP);
+                  // });
                 },
               ),
             ],
