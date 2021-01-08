@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
             child: GestureDetector(
               onTap: () {
                 _scan();
+                // _scanWithService(serviceUUID);
               },
               child: Icon(
                 Icons.search,
@@ -98,28 +99,28 @@ class _HomePageState extends State<HomePage> {
 
       print("scan finish");
       FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP2);
-      var drvCount = 0;
-      for (final drv in devices) {
-        if (drv.name == 'BLE_BM83SDK') {
-          drvCount++;
-        }
-      }
-      if (drvCount == 1) {
-        //--- jump to navagator -----
-        for (final drv in devices) {
-          if (drv.name == 'BLE_BM83SDK') {
-            print("find device : " + drv.name);
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => DevicePage(
-                  device: drv,
-                ),
-              ),
-            );
-          }
-        }
-      }
+      // var drvCount = 0;
+      // for (final drv in devices) {
+      //   if (drv.name == 'BLE_BM83SDK') {
+      //   drvCount++;
+      //   }
+      // }
+      // if (drvCount == 1) {
+      //   //--- jump to navagator -----
+      //   for (final drv in devices) {
+      //     if (drv.name == 'BLE_BM83SDK') {
+      //       print("find device : " + drv.name);
+      //       Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //           builder: (_) => DevicePage(
+      //             device: drv,
+      //           ),
+      //         ),
+      //       );
+      //     }
+      //   }
+      // }
     } catch (e) {
       print("bluetooth error : " + e.toString());
     }
@@ -161,7 +162,9 @@ class _HomePageState extends State<HomePage> {
     if (Platform.isIOS) {
       return "1801";
     } else {
-      return "49535343-fe7d-4ae5-8fa9-9fafd205e455";
+      // return "49535343-fe7d-4ae5-8fa9-9fafd205e455";
+      // return "49535343-FE7D-4AE5-8FA9-9FAF82853364";
+      return "0000fee0-0000-1000-8000-00805f9b34fb";
     }
   }
 

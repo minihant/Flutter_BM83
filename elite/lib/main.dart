@@ -53,6 +53,8 @@ class _HomePageState extends State<HomePage> {
             child: GestureDetector(
               onTap: () {
                 _scan();
+                // _scanWithService(serviceUUID);
+                // _scanWithService("1801");
               },
               child: Icon(
                 Icons.search,
@@ -100,14 +102,14 @@ class _HomePageState extends State<HomePage> {
       FlutterBeep.playSysSound(AndroidSoundIDs.TONE_PROP_BEEP2);
       var drvCount = 0;
       for (final drv in devices) {
-        if (drv.name == 'BLE_BM83SDK') {
+        if (drv.name.contains('BLE_MOSICGO')) {
           drvCount++;
         }
       }
       if (drvCount == 1) {
         //--- jump to navagator -----
         for (final drv in devices) {
-          if (drv.name == 'BLE_BM83SDK') {
+          if (drv.name.contains('BLE_MOSICGO')) {
             print("find device : " + drv.name);
             Navigator.push(
               context,
@@ -161,7 +163,8 @@ class _HomePageState extends State<HomePage> {
     if (Platform.isIOS) {
       return "1801";
     } else {
-      return "49535343-fe7d-4ae5-8fa9-9fafd205e455";
+      // return "49535343-fe7d-4ae5-8fa9-9fafd205e455";
+      return "49535343-fe7d-4ae5-8fa9-9faf82853364";
     }
   }
 

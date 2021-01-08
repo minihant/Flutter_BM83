@@ -92,13 +92,13 @@ class _DevicePageState extends State<DevicePage> {
       print("selected Navi: " + _selectedIndex.toString());
       switch (_selectedIndex) {
         case 0:
-          writeKey(services[serviceID].chs[chrsID], KeyID["btPairingKey"]);
+          writeKey(services[serviceID].chs[chrsID], KeyID["btRxModeKey"]);
           break;
         case 1:
-          writeKey(services[serviceID].chs[chrsID], KeyID["btTxModeKey"]);
+          writeKey(services[serviceID].chs[chrsID], KeyID["btPairingKey"]);
           break;
         case 2:
-          writeKey(services[serviceID].chs[chrsID], KeyID["btRxModeKey"]);
+          writeKey(services[serviceID].chs[chrsID], KeyID["btTxModeKey"]);
           break;
         case 3:
           writeKey(services[serviceID].chs[chrsID], 103);

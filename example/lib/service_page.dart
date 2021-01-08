@@ -4,8 +4,10 @@ import 'dart:typed_data';
 import 'package:bluetooth_ble/bluetooth_ble.dart';
 import 'package:flutter/material.dart';
 
-final String serviceUUID = "49535343-fe7d-4ae5-8fa9-9fafd205e455";
-final String rxUUID = "49535343-8841-43f4-a8d4-ecbe34729bb3";
+// final String serviceUUID = "49535343-fe7d-4ae5-8fa9-9fafd205e455";
+// final String rxUUID = "49535343-8841-43f4-a8d4-ecbe34729bb3";
+final String serviceUUID = "49535343-FE7D-4AE5-8FA9-9FAF82853364";
+final String rxUUID = "49535343-8841-43F4-A8D4-EC0222990568";
 
 class ServicePage extends StatefulWidget {
   final BleDevice device;

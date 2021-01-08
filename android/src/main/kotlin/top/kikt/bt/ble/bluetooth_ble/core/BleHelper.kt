@@ -32,6 +32,7 @@ class BleHelper(private val registrar: PluginRegistry.Registrar) {
     
     override fun onScanResult(callbackType: Int, result: ScanResult?) {
       super.onScanResult(callbackType, result)
+      
       logger.info("onScanResult: ${result?.device?.name}")
       bleHelper.onScanResult(callbackType, result)
     }
@@ -51,6 +52,7 @@ class BleHelper(private val registrar: PluginRegistry.Registrar) {
   
   private fun onScanResult(callbackType: Int, result: ScanResult?) {
     if (result == null) {
+     
       return
     }
     result.scanRecord?.serviceUuids?.let { uuidList ->
